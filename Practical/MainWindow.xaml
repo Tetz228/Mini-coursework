@@ -7,7 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Width="925" Height="419" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Menu HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="917"/>
+        <Menu HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="917">
+            <MenuItem Header="Инвентаризация" Margin="4,0,10,0"/>
+            <MenuItem Header="Сотрудники" Margin="4,0,10,0">
+                <MenuItem x:Name="Employees" Header="Сотрудники" Click="Employees_Click"/>
+                <MenuItem x:Name="Employees_" Header="Должности сотрудников" />
+                <MenuItem x:Name="Posts" Header="Должности" Click="Posts_Click"/>
+            </MenuItem>
+            <MenuItem Header="Товары" Margin="4,0,10,0">
+                <MenuItem Header="Товары"/>
+                <MenuItem Header="Типы товаров"/>
+                <MenuItem Header="Поставщики"/>
+            </MenuItem>
+        </Menu>
         <Frame x:Name="mainFrame" NavigationUIVisibility ="Hidden" Margin="0,24,0,0"/>
     </Grid>
 </Window>

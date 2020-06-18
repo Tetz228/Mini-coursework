@@ -17,9 +17,9 @@
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Margin="795,25,1,0">
-            <Button x:Name="Add" Content="Добавить" Height="29" Margin="0,0,0,20" Click="Add_Click" />
+            <Button x:Name="Add" Content="Добавить" Height="30" Margin="0,0,0,20" Click="Add_Click" />
             <Button x:Name="Edit" Content="Изменить" Height="30" Margin="0,0,0,20" Click="Edit_Click" />
-            <Button x:Name="Delede" Content="Удалить" Height="29" Margin="0,0,0,20" Click="Delede_Click"/>
+            <Button x:Name="Delete" Content="Удалить" Height="30" Margin="0,0,0,20" Click="Delete_Click"/>
         </StackPanel>
     </Grid>
 </Page>

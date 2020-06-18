@@ -9,5 +9,7 @@ namespace Practical
     class ClassID
     {
         static public int id_employee { get; set; }
+
+        static public int id_post { get; set; }
     }
 }

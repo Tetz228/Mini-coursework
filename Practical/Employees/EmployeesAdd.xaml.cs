@@ -1,19 +1,14 @@
-﻿using System.Data.Entity;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Practical
 {
     public partial class EmployeesAdd : Window
     {
-        dbEntities db;
+        dbEntities db = new dbEntities();
 
         public EmployeesAdd()
         {
             InitializeComponent();
-
-            db = new dbEntities();
-
-            db.Employees.Load();
         }
 
         private void AddEmp_Click(object sender, RoutedEventArgs e)

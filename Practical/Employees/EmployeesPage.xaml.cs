@@ -1,34 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Practical
 {
     public partial class EmployeesPage : Page
     {
-        dbEntities db;
+        dbEntities db = new dbEntities();
 
         public EmployeesPage()
         {
             InitializeComponent();
 
-            db = new dbEntities();
-
-            db.Employees.Load();
-
-            EmployeesGrid.ItemsSource = db.Employees.Local.ToBindingList();
+            EmployeesGrid.ItemsSource = db.Employees.ToList();
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
@@ -37,9 +21,7 @@ namespace Practical
 
             employeesAdd.ShowDialog();
 
-            db.Employees.Load();
-
-            EmployeesGrid.ItemsSource = db.Employees.Local.ToBindingList();
+            EmployeesGrid.ItemsSource = db.Employees.ToList();
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -54,15 +36,24 @@ namespace Practical
 
                 employeesEdit.ShowDialog();
 
-                db.Employees.Load();
-
-                EmployeesGrid.ItemsSource = db.Employees.Local.ToBindingList();
+                EmployeesGrid.ItemsSource = db.Employees.ToList();
             }
         }
 
-        private void Delede_Click(object sender, RoutedEventArgs e)
+        private void Delete_Click(object sender, RoutedEventArgs e)
         {
+            if (EmployeesGrid.SelectedCells.Count > 0)
+            {
+                var id = (EmployeesGrid.SelectedItem as Employees).id_employee;
 
+                Employees employees = db.Employees.Find(id);
+
+                db.Employees.Remove(employees);
+
+                db.SaveChanges();
+
+                EmployeesGrid.ItemsSource = db.Employees.ToList();
+            }
         }
     }
 }
