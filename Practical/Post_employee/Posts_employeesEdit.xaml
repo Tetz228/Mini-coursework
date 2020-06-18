@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practical.Post_employee"
         mc:Ignorable="d"
-        Title="Posts_employeesEdit" Height="450" Width="800">
+        Title="Изменить должность сотрудника" Height="188.464" Width="340.153" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="17,26,0,0" TextWrapping="Wrap" Text="Сотрудник" VerticalAlignment="Top"/>
+        <Button Content="Изменить" Margin="17,0,196,17" Click="EditPost_emp_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button Content="Отменить" IsCancel="True" Margin="203,0,10,17" Height="26" VerticalAlignment="Bottom"/>
+        <TextBlock HorizontalAlignment="Left" Margin="17,59,0,0" TextWrapping="Wrap" Text="Должность" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding}" x:Name="Emp_combo"  SelectedValuePath="id_employee" DisplayMemberPath="lname" HorizontalAlignment="Left" Margin="89,24,0,0" VerticalAlignment="Top" Width="233"/>
+        <ComboBox ItemsSource="{Binding}" x:Name="Post_combo" SelectedValuePath="id_post" DisplayMemberPath="name" HorizontalAlignment="Left" Margin="89,57,0,0" VerticalAlignment="Top" Width="233"/>
     </Grid>
 </Window>

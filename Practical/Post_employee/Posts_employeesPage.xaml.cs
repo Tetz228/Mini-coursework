@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -40,26 +41,28 @@ namespace Practical.Post_employee
             if (Posts_empGrid.SelectedCells.Count > 0)
             {
                 Posts_employeesEdit PostsEdit = new Posts_employeesEdit();
-
-                DataGridRow row = sender as DataGridRow;
-
-                var id = (Posts_empGrid.SelectedItem as Posts_employees).id_post_employee;     
-
-                ClassID.id_post_employee = id;
-
+                
                 PostsEdit.ShowDialog();
 
                 Query();
             }
         }
 
+        private void Select(object sender, RoutedEventArgs e)
+        {
+            DataGridRow row = sender as DataGridRow;
+            TextBlock tbl = Posts_empGrid.Columns[0].GetCellContent(row) as TextBlock;
+
+            int id = Convert.ToInt32(tbl.Text);
+
+            ClassID.id_post_employee = id;
+        }
+
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             if (Posts_empGrid.SelectedCells.Count > 0)
             {
-                var id = (Posts_empGrid.SelectedItem as Posts_employees).id_post_employee;
-
-                Posts_employees posts_Employees = db.Posts_employees.Find(id);
+                Posts_employees posts_Employees = db.Posts_employees.Find(ClassID.id_post_employee);
 
                 db.Posts_employees.Remove(posts_Employees);
 

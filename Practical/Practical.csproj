@@ -121,14 +121,50 @@
     <Compile Include="Roles_users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Role_user\Roles_usersAdd.xaml.cs">
+      <DependentUpon>Roles_usersAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Role_user\Roles_usersEdit.xaml.cs">
+      <DependentUpon>Roles_usersEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Role_user\Roles_usersPage.xaml.cs">
+      <DependentUpon>Roles_usersPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Shops.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\ShopAdd.xaml.cs">
+      <DependentUpon>ShopAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\ShopEdit.xaml.cs">
+      <DependentUpon>ShopEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\ShopPage.xaml.cs">
+      <DependentUpon>ShopPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Suppliers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Supplier\SuppliersAdd.xaml.cs">
+      <DependentUpon>SuppliersAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\SuppliersEdit.xaml.cs">
+      <DependentUpon>SuppliersEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\SuppliersPage.xaml.cs">
+      <DependentUpon>SuppliersPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Types_product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Type_product\Types_productAdd.xaml.cs">
+      <DependentUpon>Types_productAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Type_product\Types_productEdit.xaml.cs">
+      <DependentUpon>Types_productEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Type_product\Types_productPage.xaml.cs">
+      <DependentUpon>Types_productPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -185,6 +221,54 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Post_employee\Posts_employeesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Role_user\Roles_usersAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Role_user\Roles_usersEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Role_user\Roles_usersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shop\ShopAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shop\ShopEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Shop\ShopPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Supplier\SuppliersAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Supplier\SuppliersEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Supplier\SuppliersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Type_product\Types_productAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Type_product\Types_productEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Type_product\Types_productPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
