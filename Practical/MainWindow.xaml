@@ -11,7 +11,7 @@
             <MenuItem Header="Инвентаризация" Margin="4,0,10,0"/>
             <MenuItem Header="Сотрудники" Margin="4,0,10,0">
                 <MenuItem x:Name="Employees" Header="Сотрудники" Click="Employees_Click"/>
-                <MenuItem x:Name="Employees_" Header="Должности сотрудников" />
+                <MenuItem x:Name="Posts_emp" Header="Должности сотрудников" Click="Posts_emp_Click"/>
                 <MenuItem x:Name="Posts" Header="Должности" Click="Posts_Click"/>
             </MenuItem>
             <MenuItem Header="Товары" Margin="4,0,10,0">

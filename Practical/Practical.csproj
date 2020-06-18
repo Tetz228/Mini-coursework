@@ -97,15 +97,6 @@
     <Compile Include="Posts_employees.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Posts_employees\Posts_employeesAdd.xaml.cs">
-      <DependentUpon>Posts_employeesAdd.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Posts_employees\Posts_employeesEdit.xaml.cs">
-      <DependentUpon>Posts_employeesEdit.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Posts_employees\Posts_employeesPage.xaml.cs">
-      <DependentUpon>Posts_employeesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Post\PostsAdd.xaml.cs">
       <DependentUpon>PostsAdd.xaml</DependentUpon>
     </Compile>
@@ -114,6 +105,15 @@
     </Compile>
     <Compile Include="Post\PostsPage.xaml.cs">
       <DependentUpon>PostsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Post_employee\Posts_employeesAdd.xaml.cs">
+      <DependentUpon>Posts_employeesAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Post_employee\Posts_employeesEdit.xaml.cs">
+      <DependentUpon>Posts_employeesEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Post_employee\Posts_employeesPage.xaml.cs">
+      <DependentUpon>Posts_employeesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Products.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -164,18 +164,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Posts_employees\Posts_employeesAdd.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Posts_employees\Posts_employeesEdit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Posts_employees\Posts_employeesPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Post\PostsAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -185,6 +173,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Post\PostsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Post_employee\Posts_employeesAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Post_employee\Posts_employeesEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Post_employee\Posts_employeesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

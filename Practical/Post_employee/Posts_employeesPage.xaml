@@ -1,0 +1,25 @@
+﻿<Page x:Class="Practical.Post_employee.Posts_employeesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practical.Post_employee"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Posts_employeesPage" Width="903" Height="419">
+
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" Width="792" AutoGenerateColumns="False" x:Name="Posts_empGrid" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id_post_employee}" Visibility="Collapsed" Header="id" Width="0"/>
+                <DataGridTextColumn Binding="{Binding fk_emp}" Header="Сотрудник" Width="*"/>
+                <DataGridTextColumn Binding="{Binding fk_post}" Header="Должность" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Margin="795,25,1,0">
+            <Button x:Name="Add" Content="Добавить" Height="30" Margin="0,0,0,20" Click="Add_Click"/>
+            <Button x:Name="Edit" Content="Изменить" Height="30" Margin="0,0,0,20" Click="Edit_Click"/>
+            <Button x:Name="Delete" Content="Удалить" Height="30" Margin="0,0,0,20" Click="Delete_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

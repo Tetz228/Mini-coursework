@@ -1,4 +1,5 @@
 ﻿using Practical.Post;
+using Practical.Post_employee;
 using System.Windows;
 
 namespace Practical
@@ -20,6 +21,11 @@ namespace Practical
         private void Posts_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new PostsPage());
+        }
+
+        private void Posts_emp_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new Posts_employeesPage());
         }
     }
 }
