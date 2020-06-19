@@ -48,16 +48,6 @@ namespace Practical.Post_employee
             }
         }
 
-        private void Select(object sender, RoutedEventArgs e)
-        {
-            DataGridRow row = sender as DataGridRow;
-            TextBlock tbl = Posts_empGrid.Columns[0].GetCellContent(row) as TextBlock;
-
-            int id = Convert.ToInt32(tbl.Text);
-
-            ClassID.id_post_employee = id;
-        }
-
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             if (Posts_empGrid.SelectedCells.Count > 0)
@@ -69,6 +59,16 @@ namespace Practical.Post_employee
                 db.SaveChanges();
 
                 Query();
+            }
+        }
+
+        private void DataGridRow_Selected(object sender, RoutedEventArgs e)
+        {
+            DataGridRow row = sender as DataGridRow;
+            TextBlock tbl = Posts_empGrid.Columns[0].GetCellContent(row) as TextBlock;
+            if (!string.IsNullOrEmpty(tbl.Text))
+            {
+                ClassID.id_post_employee = Convert.ToInt32(tbl.Text);
             }
         }
     }

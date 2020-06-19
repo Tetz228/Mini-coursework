@@ -1,9 +1,11 @@
 ﻿using Practical.Post;
 using Practical.Post_employee;
+using Practical.Product;
 using Practical.Role_user;
 using Practical.Shop;
 using Practical.Supplier;
 using Practical.Type_product;
+using Practical.User;
 using System.Windows;
 
 namespace Practical
@@ -50,6 +52,16 @@ namespace Practical
         private void Suppliers_Click_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new SuppliersPage());
+        }
+
+        private void Users_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new UsersPage());
+        }
+
+        private void Products_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new ProductsPage());
         }
     }
 }

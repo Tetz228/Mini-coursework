@@ -118,6 +118,15 @@
     <Compile Include="Products.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Product\ProductsAdd.xaml.cs">
+      <DependentUpon>ProductsAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductsEdit.xaml.cs">
+      <DependentUpon>ProductsEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductsPage.xaml.cs">
+      <DependentUpon>ProductsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Roles_users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -168,6 +177,15 @@
     </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User\UsersAdd.xaml.cs">
+      <DependentUpon>UsersAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User\UsersEdit.xaml.cs">
+      <DependentUpon>UsersEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User\UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
     </Compile>
     <Page Include="Employees\EmployeesAdd.xaml">
       <SubType>Designer</SubType>
@@ -224,6 +242,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Product\ProductsAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Product\ProductsEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Product\ProductsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Role_user\Roles_usersAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -269,6 +299,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Type_product\Types_productPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User\UsersAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User\UsersEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User\UsersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

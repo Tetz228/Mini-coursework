@@ -21,6 +21,11 @@ namespace Practical
         static public int id_shop { get; set; }
 
         static public int id_supplier { get; set; }
-        
+
+        static public int id_user { get; set; }
+
+        static public string password { get; set; }
+
+        static public int id_product { get; set; }
     }
 }

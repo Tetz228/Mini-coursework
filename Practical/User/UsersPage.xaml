@@ -1,0 +1,31 @@
+﻿<Page x:Class="Practical.User.UsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practical.User"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UsersPage" Width="903" Height="419">
+
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" Width="792" AutoGenerateColumns="False" x:Name="UsersGrid" IsReadOnly="True">
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <EventSetter Event="Selected" Handler="Select"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id_user}" Header="id" MaxWidth="0"/>
+                <DataGridTextColumn Binding="{Binding login}" Header="Логин" Width="*"/>
+                <DataGridTextColumn Binding="{Binding fk_emp}" Header="Сотрудник" Width="*"/>
+                <DataGridTextColumn Binding="{Binding fk_role}" Header="Роль" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Margin="795,25,1,0">
+            <Button Content="Добавить" Height="30" Margin="0,0,0,20" Click="Add_Click" />
+            <Button x:Name="Edit" Content="Изменить" Height="30" Margin="0,0,0,20" Click="Edit_Click" />
+            <Button Content="Удалить" Height="30" Margin="0,0,0,20" Click="Delete_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

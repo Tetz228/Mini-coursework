@@ -5,6 +5,7 @@ namespace Practical.Type_product
     public partial class Types_productEdit : Window
     {
         dbEntities db = new dbEntities();
+        Types_product types_Product;
 
         public Types_productEdit()
         {

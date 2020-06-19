@@ -15,13 +15,13 @@
                 <MenuItem x:Name="Posts" Header="Должности" Click="Posts_Click"/>
             </MenuItem>
             <MenuItem Header="Товары" Margin="4,0,10,0">
-                <MenuItem Header="Список товаров"/>
+                <MenuItem Header="Список товаров" Click="Products_Click"/>
                 <MenuItem Header="Типы товаров" Click="Types_Product_Click"/>
                 <MenuItem Header="Поставщики" Click="Suppliers_Click_Click"/>
             </MenuItem>
             <MenuItem Header="Магазины" Click="Shop_Click" Margin="4,0,10,0"/>
             <MenuItem Header="Пользователи" Margin="4,0,10,0">
-                <MenuItem Header="Список пользователей"/>
+                <MenuItem Header="Список пользователей" Click="Users_Click"/>
                 <MenuItem Header="Роли пользователей" Click="Roles_users_Click"/>
             </MenuItem>
         </Menu>
