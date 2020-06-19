@@ -14,21 +14,18 @@ namespace Practical
     
     public partial class Inventory_products
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Inventory_products()
-        {
-            this.Inventory = new HashSet<Inventory>();
-        }
-    
         public int id_inv_prod { get; set; }
         public int fk_product { get; set; }
         public int fact_amount { get; set; }
         public int residue { get; set; }
         public int shortage { get; set; }
         public int surplus { get; set; }
+        public int fk_user { get; set; }
+        public int fk_shop { get; set; }
+        public System.DateTime date { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Inventory> Inventory { get; set; }
         public virtual Products Products { get; set; }
+        public virtual Shops Shops { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

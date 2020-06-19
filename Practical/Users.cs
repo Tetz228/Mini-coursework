@@ -18,6 +18,7 @@ namespace Practical
         public Users()
         {
             this.Inventory = new HashSet<Inventory>();
+            this.Inventory_products = new HashSet<Inventory_products>();
         }
     
         public int id_user { get; set; }
@@ -29,6 +30,8 @@ namespace Practical
         public virtual Employees Employees { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Inventory> Inventory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Inventory_products> Inventory_products { get; set; }
         public virtual Roles_users Roles_users { get; set; }
     }
 }

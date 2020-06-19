@@ -8,7 +8,7 @@
         Title="MainWindow" Width="925" Height="419" WindowStartupLocation="CenterScreen">
     <Grid>
         <Menu HorizontalAlignment="Center" Height="24" VerticalAlignment="Top" Width="917">
-            <MenuItem Header="Инвентаризация" Margin="4,0,10,0"/>
+            <MenuItem Header="Инвентаризация" Margin="4,0,10,0" Click="MenuItem_Click"/>
             <MenuItem Header="Сотрудники" Margin="4,0,10,0">
                 <MenuItem x:Name="Employees" Header="Список сотрудников" Click="Employees_Click"/>
                 <MenuItem x:Name="Posts_emp" Header="Должности сотрудников" Click="Posts_emp_Click"/>

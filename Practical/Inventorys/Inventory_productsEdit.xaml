@@ -1,0 +1,30 @@
+﻿<Window x:Class="Practical.Inventorys.Inventory_productsEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practical.Inventorys"
+        mc:Ignorable="d"
+        Title="Изменить инвентаризацию" Height="537.098" Width="310.426" Loaded="Window_Loaded">
+    <Grid>
+        <ComboBox ItemsSource="{Binding}" x:Name="Product_combo"  SelectedValuePath="id_product" DisplayMemberPath="name" HorizontalAlignment="Left" Margin="101,20,0,0" VerticalAlignment="Top" Width="188" Height="27"/>
+        <TextBox x:Name="TextBoxFact" HorizontalAlignment="Left" Height="23" Margin="101,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="TextBoxResidue" HorizontalAlignment="Left" Height="23" Margin="101,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="TextBoxShortage" HorizontalAlignment="Left" Height="23" Margin="101,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="TextBoxSurplus" HorizontalAlignment="Left" Height="23" Margin="101,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188"/>
+        <ComboBox ItemsSource="{Binding}" x:Name="User_combo"  SelectedValuePath="id_user" DisplayMemberPath="login" HorizontalAlignment="Left" Height="23" Margin="101,291,0,0"  VerticalAlignment="Top" Width="188"/>
+        <ComboBox ItemsSource="{Binding}" x:Name="Shop_combo"  SelectedValuePath="id_shop" DisplayMemberPath="address" HorizontalAlignment="Left" Height="23" Margin="101,341,0,0"  VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="TextBoxDate" HorizontalAlignment="Left" Height="23" Margin="101,395,0,0"  VerticalAlignment="Top" Width="188"/>
+        <TextBlock TextWrapping="Wrap" Text="Фактическое" Margin="15,75,0,0" HorizontalAlignment="Left" Width="77" Height="22" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Товар" Margin="50,20,0,0" HorizontalAlignment="Left" Width="42" Height="22" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Остатки" Margin="42,133,0,0" HorizontalAlignment="Left" Width="50" Height="21" VerticalAlignment="Top"/>
+        <TextBlock TextWrapping="Wrap" Text="Недостача" Margin="30,182,0,0" Height="17" VerticalAlignment="Top" HorizontalAlignment="Left" Width="62"/>
+        <TextBlock TextWrapping="Wrap" Text="Излишек" Margin="37,236,0,0" Height="21" VerticalAlignment="Top" HorizontalAlignment="Left" Width="59"/>
+        <TextBlock TextWrapping="Wrap" Text="Пользователей" Margin="4,295,0,0" Height="19" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92"/>
+        <TextBlock TextWrapping="Wrap" Text="Магазин" Margin="37,346,0,0" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="55"/>
+        <TextBlock TextWrapping="Wrap" Text="Дата" Margin="61,395,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="31"/>
+        <Button Content="Изменить" HorizontalAlignment="Left" Margin="10,454,0,0" Click="Edit_Click" VerticalAlignment="Top" Width="94" Height="36"/>
+        <Button Content="Отменить" IsCancel="True" Margin="198,454,0,0" VerticalAlignment="Top" Height="36" HorizontalAlignment="Left" Width="94"/>
+
+    </Grid>
+</Window>

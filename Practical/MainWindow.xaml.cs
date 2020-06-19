@@ -1,4 +1,5 @@
-﻿using Practical.Post;
+﻿using Practical.Inventorys;
+using Practical.Post;
 using Practical.Post_employee;
 using Practical.Product;
 using Practical.Role_user;
@@ -16,7 +17,7 @@ namespace Practical
         {
             InitializeComponent();
 
-            mainFrame.Navigate(new EmployeesPage());
+            mainFrame.Navigate(new InventoryPage());
         }
 
         private void Employees_Click(object sender, RoutedEventArgs e)
@@ -62,6 +63,11 @@ namespace Practical
         private void Products_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Navigate(new ProductsPage());
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new InventoryPage()); 
         }
     }
 }

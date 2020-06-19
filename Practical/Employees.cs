@@ -25,7 +25,6 @@ namespace Practical
         public string lname { get; set; }
         public string fname { get; set; }
         public string mname { get; set; }
-        
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Posts_employees> Posts_employees { get; set; }

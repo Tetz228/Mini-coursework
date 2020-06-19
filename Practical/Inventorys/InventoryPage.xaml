@@ -1,0 +1,37 @@
+﻿<Page x:Class="Practical.Inventorys.InventoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practical.Inventorys"
+      mc:Ignorable="d" 
+      d:DesignHeight="450"
+      Title="InventoryPage" Width="903" Height="419">
+
+    <Grid>
+        
+        <DataGrid HorizontalAlignment="Left" Width="792" AutoGenerateColumns="False" x:Name="InventoryGrid" IsReadOnly="True">
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <EventSetter Event="Selected" Handler="DataGridRow_Selected"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id_inv_prod}" Header="id" MaxWidth="0"/>
+                <DataGridTextColumn Header="Товар" Binding="{Binding fk_product}" Width="*"/>
+                <DataGridTextColumn Header="Фактическое" Binding="{Binding fact_amount}" Width="*"/>
+                <DataGridTextColumn Header="Остатки" Binding="{Binding residue}" Width="*"/>
+                <DataGridTextColumn Header="Недостача" Binding="{Binding shortage}" Width="*"/>
+                <DataGridTextColumn Header="Излишек" Binding="{Binding surplus}" Width="*"/>
+                <DataGridTextColumn Binding="{Binding fk_user}" Header="Пользователь" Width="*"/>
+                <DataGridTextColumn Binding="{Binding fk_shop}" Header="Магазин" Width="*"/>
+                <DataGridTextColumn Binding="{Binding date, StringFormat=dd.MM.yyyy}" Header="Дата" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Margin="795,25,0,0" HorizontalAlignment="Left" Width="108" Grid.ColumnSpan="2">
+            <Button Content="Добавить" Height="30" Margin="0,0,0,20" Click="Add_Click" />
+            <Button Content="Изменить" Height="30" Margin="0,0,0,20" Click="Edit_Click" />
+            <Button Content="Удалить" Height="30" Margin="0,0,0,20" Click="Delete_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

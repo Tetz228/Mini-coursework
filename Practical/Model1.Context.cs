@@ -16,7 +16,7 @@ namespace Practical
     public partial class dbEntities : DbContext
     {
         public dbEntities()
-            : base("name=dbEntities")
+            : base("name=dbEntities1")
         {
         }
     

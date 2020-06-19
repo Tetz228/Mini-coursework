@@ -27,5 +27,7 @@ namespace Practical
         static public string password { get; set; }
 
         static public int id_product { get; set; }
+
+        static public int id_inventory { get; set; }   
     }
 }

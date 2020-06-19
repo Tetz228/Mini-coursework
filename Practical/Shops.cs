@@ -18,6 +18,7 @@ namespace Practical
         public Shops()
         {
             this.Inventory = new HashSet<Inventory>();
+            this.Inventory_products = new HashSet<Inventory_products>();
         }
     
         public int id_shop { get; set; }
@@ -26,5 +27,7 @@ namespace Practical
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Inventory> Inventory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Inventory_products> Inventory_products { get; set; }
     }
 }
