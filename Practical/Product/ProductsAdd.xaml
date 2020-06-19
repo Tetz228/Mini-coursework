@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practical.Product"
         mc:Ignorable="d"
-        Title="ProductsAdd" Height="450" Width="800">
+        Title="Добавить товар" Height="221.564" Width="349.153" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="31,60,0,0" TextWrapping="Wrap" Text="Поставщик" VerticalAlignment="Top"/>
+        <Button Content="Добавить" Margin="17,0,196,17" Click="Add_Click" Height="26" VerticalAlignment="Bottom"/>
+        <Button Content="Отменить" IsCancel="True" Margin="203,0,10,17" Height="26" VerticalAlignment="Bottom"/>
+        <TextBlock HorizontalAlignment="Left" Margin="72,94,0,0" TextWrapping="Wrap" Text="Тип" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding}" x:Name="Sup_combo" SelectedValuePath="id_supplier" DisplayMemberPath="lname" HorizontalAlignment="Left" Margin="97,60,0,0" VerticalAlignment="Top" Width="233"/>
+        <ComboBox ItemsSource="{Binding}" x:Name="Type_combo" SelectedValuePath="id_type_product" DisplayMemberPath="name" HorizontalAlignment="Left" Margin="97,94,0,0" VerticalAlignment="Top" Width="233"/>
+        <TextBox x:Name="TextBoxName" HorizontalAlignment="Left" Height="23" Margin="97,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="233"/>
+        <TextBlock HorizontalAlignment="Left" Margin="9,25,0,0" TextWrapping="Wrap" Text="Наименование" VerticalAlignment="Top"/>
     </Grid>
 </Window>

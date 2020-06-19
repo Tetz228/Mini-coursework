@@ -5,28 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practical"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Margin" Value="20 8 20 8" />
-            <Setter Property="Width" Value="100" />
-            <Setter Property="Height" Value="30" />
-        </Style>
-    </Window.Resources>
+        Title="Авторизация" Height="224" Width="223" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="False" x:Name="phonesGrid">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding fk_emp}" Header="Chel" Width="100"/>
-                <DataGridTextColumn Binding="{Binding fk_post}" Header="Post" Width="110"/>
-                
-            </DataGrid.Columns>
-        </DataGrid>
+        <TextBox x:Name="TextBoxLog" HorizontalAlignment="Left" Height="23" Margin="15,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185"/>
+        <PasswordBox x:Name="PassBox" HorizontalAlignment="Left" Height="23" Margin="15,97,0,0"  VerticalAlignment="Top" Width="185"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,76,0,0" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="15,14,0,0" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top"/>
+        <Button Content="Войти" HorizontalAlignment="Left" Margin="44,143,0,0" VerticalAlignment="Top" Width="112" Height="40" Click="Button_Click"/>
 
-        
     </Grid>
 
 </Window>

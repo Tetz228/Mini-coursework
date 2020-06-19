@@ -1,27 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Practical.Product
 {
-    /// <summary>
-    /// Логика взаимодействия для ProductsEdit.xaml
-    /// </summary>
     public partial class ProductsEdit : Window
     {
+        dbEntities db = new dbEntities();
+
         public ProductsEdit()
         {
             InitializeComponent();
+
+            Sup_combo.ItemsSource = db.Suppliers.ToList();
+            Type_combo.ItemsSource = db.Types_product.ToList();
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            Products products = db.Products.Find(ClassID.id_product);
+
+            products.name = TextBoxName.Text;
+            products.fk_suppliers = (int)Sup_combo.SelectedValue;
+            products.fk_types = (int)Type_combo.SelectedValue;
+
+            db.SaveChanges();
+
+            this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Products products = db.Products.Find(ClassID.id_product);
+
+            TextBoxName.Text = products.name;
+            Sup_combo.SelectedValue = products.fk_suppliers;
+            Type_combo.SelectedValue = products.fk_types;
         }
     }
 }
